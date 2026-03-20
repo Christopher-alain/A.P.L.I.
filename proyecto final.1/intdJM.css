@@ -1,0 +1,192 @@
+:root {
+    --primary-color: #6a1b9a;
+    --secondary-color: #4a148c;
+    --accent-color: #e1bee7;
+    --text-light: #ffffff;
+    --text-dark: #311b92;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --hover-color: #9c27b0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-light);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Navegación */
+.nav-menu {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-color);
+}
+
+/* Título y subtítulo */
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 3rem;
+}
+
+/* Grid de juegos */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Tarjetas de juegos */
+.game-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.game-content {
+    padding: 2rem;
+}
+
+.game-card h2 {
+    font-size: 1.8rem;
+    margin: 0 0 1rem;
+    color: var(--accent-color);
+}
+
+.game-description {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Características del juego */
+.game-features {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.game-features span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* Botón de jugar */
+.play-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--accent-color);
+    color: var(--text-dark);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.play-button:hover {
+    background: var(--hover-color);
+    color: var(--text-light);
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .game-card {
+        margin-bottom: 1rem;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.game-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.game-card:nth-child(1) { animation-delay: 0.1s; }
+.game-card:nth-child(2) { animation-delay: 0.2s; }
+.game-card:nth-child(3) { animation-delay: 0.3s; }

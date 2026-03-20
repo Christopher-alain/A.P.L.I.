@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Juego de Traducción — Otomí</title>
+<link rel="stylesheet" href="jg8.css" />
+  <header class="header" role="banner">
+    <button id="backBtn" class="back-btn" type="button" aria-label="Volver">← Volver</button>
+    <div class="logo" aria-hidden="true"></div>
+    <div>
+      <div style="font-weight:900">Juego: Traduce frases</div>
+      <div style="font-size:13px;opacity:0.95">Traduce frases entre Hñähñu (otomí) y Español</div>
+    </div>
+  </header>
+</head>
+<body>
+
+
+  <main class="container" role="main">
+    <section class="card" aria-labelledby="gameTitle">
+      <div class="row">
+        <h1 id="gameTitle" class="title">Traduce la frase, si es necesario menciona que tipo de frace es.</h1> 
+        <div class="score" id="score">Puntos: 0</div>
+      </div>
+
+      <div style="margin-top:8px" class="flex-between">
+        <div class="small">Dirección:</div>
+        <div style="display:flex;gap:8px">
+          <button class="toggle" id="dirBtn">Otomí → Español</button>
+          <button class="secondary" id="nuevoBtn">Nueva frase</button>
+        </div>
+      </div>
+
+      <div class="phrase" id="phrase">...</div>
+
+      <div class="controls">
+        <input type="text" id="answer" placeholder="Escribe la traducción aquí" autocomplete="off" />
+        <button id="checkBtn">Verificar</button>
+        <button id="revealBtn" class="secondary">Mostrar respuesta</button>
+      </div>
+
+      <div id="feedback" class="feedback" aria-live="polite" style="display:none"></div>
+      <div id="correctReveal" class="small" style="display:none"></div>
+      <div class="footer">Presiona Enter para enviar. Usa "Otomí → Español" o cámbialo para "Español → Otomí".</div>
+    </section>
+  </main>
+
+<script src="jg8-z.js"></script>
+</body>
+</html>

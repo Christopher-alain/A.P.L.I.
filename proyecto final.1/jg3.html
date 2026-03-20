@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completar Frases en Otomí</title>
+    <link rel="stylesheet" href="jg3.css">
+</head>
+<body>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="esc.html">Escritura</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Ra Nt'ot'e ya Hñä - Completa las Frases</h1>
+            <div class="game-stats">
+                <div class="stat">Puntos: <span id="score">0</span></div>
+                <div class="stat">Nivel: <span id="level">1</span></div>
+            </div>
+        </header>
+
+        <main>
+            <div class="sentence-container">
+                <div class="sentence-box">
+                    <h3>En Español:</h3>
+                    <div class="sentence" id="sentence-es"></div>
+                </div>
+                <div class="sentence-box">
+                    <h3>En Otomí:</h3>
+                    <div class="sentence" id="sentence-ot"></div>
+                </div>
+            </div>
+
+            <div id="options" class="options-container"></div>
+            <div id="result" class="result-message"></div>
+
+            <div class="controls">
+                <button id="next-btn" class="btn" disabled>Siguiente</button>
+                <button id="help-btn" class="btn">Ayuda</button>
+            </div>
+        </main>
+
+        <section id="dictionary" class="dictionary-section">
+            <h3>📖 Diccionario Español-Otomí</h3>
+            <div class="dictionary-container">
+                <ul>
+                    <li><span class="es">humano</span>: <span class="ot">hñä</span></li>
+                    <li><span class="es">perro</span>: <span class="ot">xita</span></li>
+                    <li><span class="es">pájaro</span>: <span class="ot">t'o̱gi</span></li>
+                    <li><span class="es">bonita</span>: <span class="ot">ki̱mä</span></li>
+                    <li><span class="es">de tela</span>: <span class="ot">thogi</span></li>
+                    <li><span class="es">inservible</span>: <span class="ot">mät'i</span></li>
+                    <li><span class="es">sol</span>: <span class="ot">ñä</span></li>
+                    <li><span class="es">luna</span>: <span class="ot">ya̱hi</span></li>
+                    <li><span class="es">estrella</span>: <span class="ot">ts'iki</span></li>
+                    <li><span class="es">corre</span>: <span class="ot">mbo̱ni</span></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="jg3.js"></script>
+</body>
+</html>

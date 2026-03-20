@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria en Otomí</title>
+    <link rel="stylesheet" href="jg2.css">
+</head>
+<body>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="esc.html">Escritura</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Ra Nt'eni Nfeni - Juego de Memoria</h1>
+        
+        <div class="game-stats">
+            <div class="stat">Intentos: <span id="attempts">0</span></div>
+            <div class="stat">Coincidencias: <span id="matches">0</span></div>
+            <div class="stat">Tiempo: <span id="timer">0:00</span></div>
+        </div>
+
+        <div id="game-board"></div>
+
+        <div class="controls">
+            <button id="restart-btn" class="btn">Reiniciar Juego</button>
+            <button id="help-btn" class="btn">Ayuda</button>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="jg2.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Lengua Otomí</title>
+    <link rel="stylesheet" href="jg1.css">
+</head>
+<body>
+
+<nav class="nav-menu">
+    <ul>
+        <li><a href="esc.html">Escritura</a></li>
+    </ul>
+</nav>
+
+<div class="main-content">
+    <h1>Aprende Otomí</h1>
+
+    <div class="question" id="question"></div>
+
+    <div id="arena">
+        <div id="player">🙂</div>
+        <div id="options"></div>
+    </div>
+
+    <div id="controls">
+        <button onclick="move('north')">⬆️</button>
+        <div>
+            <button onclick="move('west')">⬅️</button>
+            <button onclick="move('south')">⬇️</button>
+            <button onclick="move('east')">➡️</button>
+        </div>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<!-- SONIDOS -->
+<audio id="correctSound" src="correct.mp3"></audio>
+<audio id="incorrectSound" src="incorrect.mp3"></audio>
+
+<script src="jg1.js"></script>
+</body>
+</html>

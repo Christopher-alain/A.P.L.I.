@@ -1,0 +1,471 @@
+:root {
+    --primary-color: #6a1b9a;
+    --secondary-color: #4a148c;
+    --accent-color: #43a047;
+    --light-purple: #e1bee7;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --gradient-1: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9fc;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navegación */
+.nav-menu {
+    background-color: rgba(106, 27, 154, 0.95);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.levels-secbtn {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.levels-gridbtn {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.nav-menu a:hover {
+    color: var(--light-purple);
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+.level-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.level-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(106, 27, 154, 0.2);
+}
+
+.level-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.level-card p {
+    color: #666;
+    margin: 15px 0;
+}
+
+/* Encabezado */
+.main-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--gradient-1);
+    color: var(--white);
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.main-header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+/* Sección del alfabeto */
+.alphabet-section {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    margin-bottom: 40px;
+}
+
+.section-description {
+    text-align: center;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.alphabet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.letter-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.letter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.letter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.letter {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.pronunciation {
+    font-size: 0.9em;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* Efecto de ondas al hacer hover */
+.letter-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255,255,255,0.1);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    opacity: 0;
+    transition: transform 0.6s, opacity 0.6s;
+}
+
+.letter-card:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Guía de pronunciación */
+.pronunciation-guide {
+    background: var(--light-purple);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.guide-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.guide-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.guide-card h4 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+/* Sección de práctica */
+.practice-section {
+    margin: 40px 0;
+}
+
+.word-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.word-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.otomi {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.spanish {
+    color: var(--text-dark);
+}
+
+.play-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.play-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Imagen del alfabeto */
+.alphabet-image-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.alphabet-image {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.image-caption {
+    margin-top: 10px;
+    color: var(--text-dark);
+    font-style: italic;
+}
+
+/* Sección de Vocabulario */
+.vocabulary-section {
+    padding: 40px 0;
+    background: linear-gradient(135deg, rgba(106, 27, 154, 0.05), rgba(74, 20, 140, 0.1));
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.vocabulary-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.section-description {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.category-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-card h3::before {
+    content: '📚';
+    font-size: 1.2em;
+}
+
+.word-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.word-item {
+    background: linear-gradient(135deg, #f5f7fa, #f8f9fa);
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(106, 27, 154, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.word-item:hover {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    border-color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.otomi {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.spanish {
+    color: var(--text-dark);
+    font-size: 1em;
+    display: block;
+}
+
+.note {
+    color: var(--secondary-color);
+    font-size: 0.85em;
+    font-style: italic;
+    margin-top: 5px;
+    display: block;
+    opacity: 0.8;
+}
+
+/* Iconos para categorías específicas */
+.category-card[data-category="saludos"] h3::before { content: '👋'; }
+.category-card[data-category="pronombres"] h3::before { content: '👥'; }
+.category-card[data-category="cuerpo"] h3::before { content: '🫂'; }
+.category-card[data-category="familia"] h3::before { content: '👨‍👩‍👧‍👦'; }
+.category-card[data-category="naturaleza"] h3::before { content: '🌿'; }
+.category-card[data-category="verbos"] h3::before { content: '⚡'; }
+.category-card[data-category="preguntas"] h3::before { content: '❓'; }
+
+/* Media Queries para responsividad */
+@media screen and (max-width: 868px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .word-list {
+        grid-template-columns: 1fr;
+    }
+
+    .vocabulary-section h2 {
+        font-size: 2em;
+    }
+
+    .category-card {
+        padding: 20px;
+    }
+}
+
+/* Animación de aparición gradual */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.category-card {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.word-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.word-item::after {
+    content: '🔊';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.word-item:hover::after {
+    opacity: 0.7;
+}

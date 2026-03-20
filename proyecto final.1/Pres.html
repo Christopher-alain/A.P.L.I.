@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel Básico - Aprende Otomí</title>
+    <link rel="stylesheet" href="Pres.css">
+</head>
+<body>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="GuíaPDC.html">ATRAS</a></li>
+        </ul>
+    </nav>
+
+    <section class="vocabulary-section">
+        <h2>Presentación en hñähñu</h2>
+        <p class="section-description">Explora y aprende palabras comunes en Otomí</p>
+
+        <div class="category-grid">
+            <div class="category-card" data-category="saludos">
+                <h3>Saludos y expresiones básicas</h3>
+                <div class="word-list">
+                    <div class="word-item">
+                        <span class="otomi">Nuga drä nxutsi</span>
+                        <span class="spanish">Yo soy niña</span>
+                    </div>
+                    <div class="word-item">
+                        <span class="otomi">Nuga drä ts'unt'u</span>
+                        <span class="spanish">Yo soy niño</span>
+                    </div>
+                    <div class="word-item">
+                        <span class="otomi">Nuga drä 'behña</span>
+                        <span class="spanish">Yo soy mujer</span>
+                    </div>
+                    <div class="word-item">
+                        <span class="otomi">Nuga drä 'ñoho</span>
+                        <span class="spanish">Yo soy hombre</span>
+                    </div>
+                    <div class="word-item">
+                        <span class="otomi">Nnuga drä ñähñu</span>
+                        <span class="spanish">Yo soy de la cultura Hñähñu</span>
+                    </div>
+                    <div class="word-item">
+                        <span class="otomi">Ma hñaki Hñähñu</span>
+                        <span class="spanish">Mi lengua es Hñähñu</span>
+                    </div>
+                    <div class="word-item">
+                        <span class="otomi">Ma nzäi m'ui Hñähñu</span>
+                        <span class="spanish">Mi cultura es Hñähñu</span>
+                    </div>
+                    <div class="word-item">
+                        <span class="otomi">Nuga di ñähñu</span>
+                        <span class="spanish">Yo hablo Hñähñu</span>
+                    </div>
+                    <div class="word-item">
+                        <span class="otomi">Nuga hindi ñähñu</span>
+                        <span class="spanish">Yo no hablo Hñähñu</span>
+                    </div>
+                    <div class="word-item">
+                        <span class="otomi">Nuga drä 'Iyongunsadi</span>
+                        <span class="spanish">Yo soy estudiante</span>
+                    </div>
+                    <div class="word-item">
+                        <span class="otomi">Nuga drä mengu Panales</span>
+                        <span class="spanish">Yo soy de Panales</span>
+                    </div>
+                    <div class="word-item">
+                        <span class="otomi">Ma ñaxu hnini Ixmiquilpan</span>
+                        <span class="spanish">Mi cabecera municipal es Ixmiquilpan</span>
+                    </div>
+                    <div class="word-item">
+                        <span class="otomi">Ma hyodi Hidalgo</span>
+                        <span class="spanish">Mi Estado es Hidalgo</span>
+                    </div>
+                    <div class="word-item">
+                        <span class="otomi">Ma hai México</span>
+                        <span class="spanish">Mi país es México</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="levels-secbtn">
+        <div class="levels-gridbtn">
+            <div class="level-card" onclick="window.location.href='jg7.html'">
+                <h2>Practica tu Nivel</h2>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function playSound(audioId) {
+            const audio = document.getElementById(audioId);
+            if(audio) {
+                audio.currentTime = 0;
+                audio.play();
+            }
+        }
+
+        function playWord(wordId) {
+            const audio = new Audio(`sonidos/${wordId}.mp3`);
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>

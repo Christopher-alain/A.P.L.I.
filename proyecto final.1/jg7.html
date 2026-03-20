@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minijuego: Completa la frase en Hñähñu</title>
+<link rel="stylesheet" href="jg7.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Botón de regreso agregado -->
+            <button id="backBtn" class="back-btn" type="button" aria-label="Volver">← Volver</button>
+            <h1>Completa la Frase en Hñähñu</h1>
+            <p class="subtitle">Aprende el idioma Hñähñu (Otomí) completando estas frases</p>
+        </header>
+        
+        <div class="game-info">
+            <div class="info-item">
+                <div class="info-label">PUNTUACIÓN</div>
+                <div class="info-value" id="score">0</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">FRASES COMPLETADAS</div>
+                <div class="info-value" id="completed">0/15</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">TIEMPO</div>
+                <div class="info-value" id="timer">60</div>
+            </div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        
+        <div class="game-area" id="gameArea">
+            <div class="phrase-container">
+                <div class="phrase" id="phrase"></div>
+                <div class="translation" id="translation"></div>
+            </div>
+            
+            <div class="options" id="options"></div>
+            
+            <div class="feedback" id="feedback"></div>
+            
+            <div class="controls">
+                <button id="nextButton" disabled>Siguiente Frase</button>
+                <button id="hintButton">Pista</button>
+            </div>
+        </div>
+        
+        <div class="game-complete" id="gameComplete">
+            <div class="celebration">🎉</div>
+            <h2>¡Felicidades!</h2>
+            <p>Has completado todas las frases en Hñähñu</p>
+            <p>Tu puntuación final: <span id="finalScore">0</span></p>
+            <button id="restartButton">Jugar de Nuevo</button>
+        </div>
+    </div>
+
+    <script src="jg7-z.js"></script>
+    <script>
+      // Navegar a Pres.html al hacer clic; fallback si no existe historial
+      const backBtn = document.getElementById('backBtn');
+      if (backBtn) {
+        backBtn.addEventListener('click', () => {
+          // ir a la página de apartado Pres.html
+          window.location.href = 'Pres.html';
+        });
+        // tecla Escape también regresa
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') backBtn.click();
+        });
+      }
+    </script>
+</body>
+</html>

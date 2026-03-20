@@ -1,0 +1,213 @@
+/* Estilos específicos para rituales.html */
+:root {
+    --primary-dark: #000000;
+    --secondary-dark: ;
+    --accent-red: #8b3500;
+    --light-red: #ff6600;
+    --text-light: #ffffff;
+    --text-gray: #cccccc;
+}
+
+body {
+    background-image: url('cLyL.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #333; /* Color para las áreas no cubiertas */
+}
+
+body {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(135deg, var(--accent-red), var(--primary-dark));
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(222, 220, 219, 0.5);
+}
+
+header img {
+    width: 250px;
+    height: auto;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #f3ecec;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover {
+    background: #6a89cc;
+    color: #fff;
+}
+
+.pre-section {
+    background: var(--gradient-2);
+    color: var(--text-light);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 30px auto;
+    max-width: 1200px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.pre-section h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.learning-section {
+    background-color: var(--secondary-dark);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--accent-red);
+    transition: transform 0.3s ease;
+}
+
+.learning-section:hover {
+    transform: translateY(-5px);
+}
+
+.aprende-section {
+    background-color: rgba(139, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px;
+    border: 1px solid var(--accent-red);
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: var(--light-red);
+    border-bottom: 2px solid var(--accent-red);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: var(--light-red);
+    margin-top: 25px;
+}
+
+p {
+    color: var(--text-gray);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Estilos de las imagenes */
+.contenedor {
+    width: 350px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+     margin: auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+ 
+}
+
+footer {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 2px solid var(--accent-red);
+}
+
+footer a {
+    color: var(--light-red);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--text-light);
+}
+
+/* Efectos de hover para listas */
+ul li, ol li {
+    transition: transform 0.2s ease;
+    padding: 5px 0;
+}
+
+ul li:hover, ol li:hover {
+    transform: translateX(10px);
+    color: var(--light-red);
+}
+
+/* Animación de entrada para secciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .nav-menu a {
+        padding: 10px 20px;
+    }
+}

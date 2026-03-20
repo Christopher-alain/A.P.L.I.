@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel Básico - Aprende Otomí</title>
+    <link rel="stylesheet" href="orl.css">
+</head>
+<body>    <nav class="nav-menu">
+        <ul>
+            <li><a href="EjerPDI.html">ATRAS</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="main-header">
+            <h1>Oraciones en hñähñu</h1>
+            <p class="subtitle">Aprende a hacer oraciones en hñähñu</p>
+        </header>
+
+                <h3>Guía de oraciones</h3>
+                <div class="guide-cards">
+                    <div class="guide-card">
+                        <h4>Vocales Simples</h4>
+                        <p> Artículo (El)+ sustantivo (conejo)+nexo (Y)+ artículo (el) +sustantivo (Tlacuache).
+                            <br> 
+                            (El conejo y el tlacuache)
+                    </p>
+                    </div>
+                    <div class="guide-card">
+                        <h4>Vocales Especiales</h4>
+                        <p>Artículo (El)+ sustantivo (conejo)+ adjetivo (ágil) nexo (Y)+ artículo (el) +sustantivo (Tlacuache) +adjetivo (gris).
+                        <br>
+                            (el conejo ágil y el tlacuache gris)
+                        </p>
+                    </div>
+                    <div class="guide-card">
+                        <h4>Consonantes Especiales</h4>
+                        <p>En la lengua Hñähñu: Artículo (Rä) +sustantivo (Ꞌbanjua) +nexo (ne) +sustantivo (däzu̱)
+                    <br>
+                        (Rä Ꞌbnjua ne rä däzu̱).
+                    </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h4>Vocales Especiales</h4>
+                        <p> Artículo (Rä)+adjetiva (Ꞌñehya) +sustantivo (Ꞌbanjua)+nexo (ne) +rtículo (rä) +adjetiva+ (Ꞌbospi)+sustantivo (däzu̱)
+<br>
+(Rä Ꞌñehya Ꞌbanjua ne rä Ꞌbospi däzu̱)
+                        </p>
+                    </div>
+                </div>
+            <p>
+En un enunciado lleva proclítico que va antes del verbo y define la persona y el tiempo.
+Hablo la lengua hñähñu (tiempo presente). Dí (proclítico) ña (verbo hablar) rä (artículo la) hñaki (sustantivo)  Hñähñu (sustantivo) 
+</p>
+
+    <script>
+        function playSound(audioId) {
+            const audio = document.getElementById(audioId);
+            if(audio) {
+                audio.currentTime = 0;
+                audio.play();
+            }
+        }
+
+        function playWord(wordId) {
+            const audio = new Audio(`sonidos/${wordId}.mp3`);
+            audio.play();
+        }
+    </script>
+</body>
+</html>

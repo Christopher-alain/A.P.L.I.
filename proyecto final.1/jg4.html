@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minijuego: Escribe el nombre del número</title>
+<link rel="stylesheet" href="jg4.css">
+</head>
+<body>
+    
+<body>    <nav class="nav-menu">
+        <ul>
+            <li><a href="intdJM.html">ATRAS</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Escribe el nombre del número</h1>
+        
+        <div class="instructions">
+            <p>Se mostrará un número entre 1 y 100. Escribe cómo se llama ese número en español y presiona "Comprobar" para verificar tu respuesta.</p>
+        </div>
+        
+        <div class="game-area">
+            <div class="number-display" id="number-display">
+                <!-- El número se mostrará aquí -->
+            </div>
+            
+            <div class="input-area">
+                <input type="text" id="answer" placeholder="Escribe el nombre del número aquí">                
+                <div>
+                    <button id="submit-btn">Comprobar</button>
+                    <button id="next-btn" style="display:none;">Siguiente número</button>
+                </div>
+            </div>
+            
+            <div class="feedback" id="feedback"></div>
+            
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+        
+        <div class="score">
+            <div>Puntuación: <span id="score">0</span></div>
+            <div>Correctas: <span id="correct-count">0</span>/<span id="total-count">0</span></div>
+        </div>
+    </div>
+
+    <script src="jg4.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaciona Frases - Minijuego</title>
+<link rel="stylesheet" href="jg6.css">
+</head>
+<body>
+    <header>
+        <button id="backBtn" class="back-btn" type="button" aria-label="Volver">← Volver</button>
+        <h1>Relaciona Frases</h1>
+        <p class="description">Relaciona las frases en el idioma desconocido con sus traducciones en español</p>
+    </header>
+    
+    <div class="container">
+        <div class="game-stats">
+            <div class="stat">
+                <div class="stat-label">Puntuación</div>
+                <div class="stat-value" id="score">0</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Intentos</div>
+                <div class="stat-value" id="attempts">0</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Aciertos</div>
+                <div class="stat-value" id="correct">0</div>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div class="column">
+                <div class="column-title">Idioma Desconocido</div>
+                <div id="phrases-container"></div>
+            </div>
+            <div class="column">
+                <div class="column-title">Español</div>
+                <div id="translations-container"></div>
+            </div>
+        </div>
+        
+        <div class="message" id="message"></div>
+        
+        <div class="controls">
+            <button id="check-btn">Comprobar</button>
+            <button id="reset-btn">Reiniciar</button>
+            <button id="next-btn">Siguiente</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>Instrucciones</h3>
+            <ol>
+                <li>Selecciona una frase del idioma desconocido</li>
+                <li>Selecciona su traducción en español</li>
+                <li>Haz clic en "Comprobar" para verificar tu respuesta</li>
+                <li>Usa "Siguiente" para pasar a un nuevo conjunto de frases</li>
+                <li>¡Intenta conseguir la mayor puntuación posible!</li>
+            </ol>
+        </div>
+    </div>
+<script src="jg6-z.js"></script>
+<script>
+  document.getElementById('backBtn').addEventListener('click', () => {
+    window.location.href = 'Org.html';
+  });
+</script>
+</body>
+</html>

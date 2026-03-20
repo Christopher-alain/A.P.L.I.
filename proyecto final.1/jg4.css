@@ -1,0 +1,200 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2575fc;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .instructions {
+            background-color: #e6f2ff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #333;
+        }
+        
+        .number-display {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #2575fc;
+            margin: 30px 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+            min-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .input-area {
+            margin: 30px 0;
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.3rem;
+            text-align: center;
+            border: 3px solid #2575fc;
+            border-radius: 10px;
+            outline: none;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus {
+            border-color: #ff6b6b;
+            box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+        }
+        
+        button {
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 5px;
+        }
+        
+        button:hover {
+            background-color: #1a5fd8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        #next-btn {
+            background-color: #28a745;
+        }
+        
+        #next-btn:hover {
+            background-color: #218838;
+        }
+        
+        .feedback {
+            margin: 20px 0;
+            min-height: 60px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .correct {
+            color: #28a745;
+            background-color: #d4edda;
+            border: 2px solid #c3e6cb;
+        }
+        
+        .incorrect {
+            color: #dc3545;
+            background-color: #f8d7da;
+            border: 2px solid #f5c6cb;
+        }
+        
+        .score {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 25px;
+            font-size: 1.2rem;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #28a745, #20c997);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        .hint {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .number-display {
+                font-size: 4rem;
+            }
+            
+            input {
+                font-size: 1.1rem;
+            }
+        }
+        .nav-menu {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-color);
+}

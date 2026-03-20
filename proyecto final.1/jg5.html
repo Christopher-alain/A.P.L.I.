@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minijuego: Escribe el número en dígitos</title>
+<link rel="stylesheet" href="jg5.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Escribe el número en dígitos</h1>
+        
+        <div class="instructions">
+            <p>Se mostrará el nombre de un número en español. Escribe el número correspondiente en dígitos y presiona "Comprobar" para verificar tu respuesta.</p>
+        </div>
+        
+        <div class="difficulty-selector">
+            <label for="difficulty">Dificultad:</label>
+            <select id="difficulty">
+                <option value="easy">Fácil (1-20)</option>
+                <option value="medium">Medio (1-50)</option>
+                <option value="hard">Difícil (1-100)</option>
+            </select>
+        </div>
+        
+        <div class="game-area">
+            <div class="number-name-display" id="number-name-display">
+                <!-- El nombre del número se mostrará aquí -->
+            </div>
+            
+            <div class="input-area">
+                <input type="number" id="answer" placeholder="Escribe el número aquí" min="1" max="100">
+                <p class="hint">Escribe solo el número en dígitos (ej: 25)</p>
+                
+                <div>
+                    <button id="submit-btn">Comprobar</button>
+                    <button id="next-btn" style="display:none;">Siguiente número</button>
+                </div>
+            </div>
+            
+            <div class="feedback" id="feedback"></div>
+            
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+        
+        <div class="score">
+            <div>Puntuación: <span id="score">0</span></div>
+            <div>Correctas: <span id="correct-count">0</span>/<span id="total-count">0</span></div>
+        </div>
+    </div>
+
+<script src="jg5.js"></script>  
+</body>
+</html>
