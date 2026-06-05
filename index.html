@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Los Chatos · Papelería y Regalos</title>
+    <!-- Fuentes e iconos modernos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fef9f0;
+            color: #2c2b28;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .logo-text, .nav-links a, .price-tag, .btn, .contacto-item strong {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: baseline;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e07c2c;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            font-size: 1.1rem;
+            font-weight: 500;
+            background: #f7d9b5;
+            padding: 4px 12px;
+            border-radius: 40px;
+            color: #aa5c1a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #3d2a1a;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+
+        .nav-links a i {
+            margin-right: 6px;
+        }
+
+        .nav-links a:hover {
+            color: #e07c2c;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #ffe6cf 0%, #ffdbb5 100%);
+            border-radius: 32px;
+            margin: 30px 0 40px 0;
+            padding: 48px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.05);
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text .badge {
+            background: #fff1e0;
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #c2641a;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h2 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: #4a2a12;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #5f3e22;
+            margin-bottom: 28px;
+            max-width: 90%;
+        }
+
+        .price-highlight {
+            background: white;
+            border-radius: 60px;
+            display: inline-flex;
+            gap: 20px;
+            padding: 10px 24px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .price-highlight span:first-child {
+            color: #2b7a4b;
+        }
+
+        .price-highlight span:last-child {
+            color: #e07c2c;
+        }
+
+        .hero-image {
+            flex: 0.8;
+            text-align: center;
+            background: #fff5e8;
+            border-radius: 28px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .hero-image i {
+            font-size: 80px;
+            color: #e07c2c;
+            margin: 10px;
+        }
+
+        .hero-image .fa-pen-ruler, .hero-image .fa-gift {
+            font-size: 65px;
+            background: white;
+            padding: 20px;
+            border-radius: 60px;
+            margin: 0 8px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+        }
+
+        .btn {
+            display: inline-block;
+            background: #e07c2c;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #e07c2c;
+            color: #e07c2c;
+        }
+
+        .btn-outline:hover {
+            background: #e07c2c;
+            color: white;
+        }
+
+        .btn:hover {
+            background: #c2651b;
+            transform: translateY(-3px);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 60px 0 20px 0;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #e07c2c;
+            border-radius: 5px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+            margin: 40px 0 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 28px;
+            padding: 24px 20px 20px;
+            transition: all 0.25s ease;
+            box-shadow: 0 12px 22px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid #ffefdf;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px rgba(224,124,44,0.15);
+            border-color: #ffd7ae;
+        }
+
+        .product-icon {
+            font-size: 3.4rem;
+            color: #e07c2c;
+            margin-bottom: 16px;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-desc {
+            color: #5e5b57;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2b7a4b;
+            margin-bottom: 12px;
+        }
+
+        .product-tag {
+            background: #fbe9db;
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #b45713;
+        }
+
+        /* Sección imágenes horizontales */
+        .image-showcase {
+            margin: 50px 0 30px;
+        }
+        .image-showcase h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-align: center;
+            color: #4a2a12;
+        }
+        .image-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .image-card {
+            flex: 1;
+            min-width: 240px;
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        .image-card:hover {
+            transform: translateY(-6px);
+        }
+        .image-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 3px solid #e07c2c;
+        }
+        .image-caption {
+            padding: 12px 15px;
+            background: white;
+            font-weight: 500;
+            color: #5f3e22;
+        }
+        @media (max-width: 800px) {
+            .image-card img {
+                height: 220px;
+            }
+            .image-row {
+                gap: 20px;
+            }
+        }
+
+        .special-collection {
+            background: #fff3e6;
+            border-radius: 40px;
+            padding: 40px 30px;
+            margin: 60px 0;
+        }
+
+        .special-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .special-title i {
+            color: #e07c2c;
+            margin-right: 10px;
+        }
+        .specials-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .special-item {
+            background: white;
+            border-radius: 32px;
+            padding: 20px 25px;
+            width: 220px;
+            text-align: center;
+            transition: 0.2s;
+        }
+        .special-item i {
+            font-size: 48px;
+            color: #e07c2c;
+            margin-bottom: 12px;
+        }
+        .special-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+        .special-item p {
+            font-size: 0.85rem;
+            color: #7a644e;
+        }
+
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            background: white;
+            border-radius: 38px;
+            padding: 40px;
+            margin: 50px 0;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+        }
+
+        .contact-info {
+            flex: 1.2;
+        }
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #4a2a12;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .contact-detail i {
+            font-size: 1.8rem;
+            color: #e07c2c;
+            width: 45px;
+            text-align: center;
+        }
+
+        .owner-name {
+            margin-top: 30px;
+            background: #fcf2e7;
+            padding: 14px 20px;
+            border-radius: 28px;
+            display: inline-block;
+        }
+
+        .map-placeholder {
+            flex: 1;
+            background: #ebe1d4;
+            border-radius: 32px;
+            padding: 20px;
+            text-align: center;
+            min-height: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .map-placeholder i {
+            font-size: 48px;
+            color: #c9702a;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #2c241c;
+            color: #efdfcf;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 32px 32px 0 0;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 800px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 32px 20px;
+            }
+            .hero-text p {
+                max-width: 100%;
+            }
+            .price-highlight {
+                justify-content: center;
+            }
+            .section-title:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .section-title {
+                text-align: center;
+                display: block;
+            }
+            .contact-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav class="navbar">
+        <div class="logo">
+            <h1>LOS CHATOS</h1>
+            <span>Papelería & Regalos</span>
+        </div>
+        <div class="nav-links">
+            <a href="#productos"><i class="fas fa-pencil-alt"></i> Productos</a>
+            <a href="#especiales"><i class="fas fa-star"></i> Destacados</a>
+            <a href="#contacto"><i class="fas fa-map-marker-alt"></i> Contacto</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-text">
+            <div class="badge"><i class="fas fa-gift"></i> ¡Tu mejor opción escolar y más!</div>
+            <h2>Artículos de papelería, juguetes y regalos</h2>
+            <p>Copias, útiles escolares, regalos originales y diversión para niños. Calidad y calidez en Mixquiahuala.</p>
+            <div class="price-highlight">
+                <span><i class="fas fa-tag"></i> Desde $2</span>
+                <span><i class="fas fa-gem"></i> Hasta $150</span>
+            </div>
+            <a href="#productos" class="btn"><i class="fas fa-store"></i> Ver productos</a>
+        </div>
+        <div class="hero-image">
+            <i class="fas fa-pen-ruler"></i>
+            <i class="fas fa-crayons"></i>
+            <i class="fas fa-gift"></i>
+            <p style="margin-top:12px; font-weight:500;">✨ Sorpresas para niños ✨</p>
+        </div>
+    </div>
+
+    <!-- Productos destacados -->
+    <div id="productos">
+        <h2 class="section-title"><i class="fas fa-box-open"></i> Nuestros productos estrella</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-icon"><i class="fas fa-copy"></i></div>
+                <h3>Copias impresiones</h3>
+                <div class="product-desc">Blanco y negro / color, rápida calidad. ¡Ideal para tareas!</div>
+                <div class="product-price">$2 c/u</div>
+                <span class="product-tag">DESDE $2</span>
+            </div>
+            <div class="product-card">
+                <div class="product-icon"><i class="fas fa-pencil-ruler"></i></div>
+                <h3>Útiles escolares</h3>
+                <div class="product-desc">Cuadernos, lápices, colores, mochilas y más variedad</div>
+                <div class="product-price">$10 - $120</div>
+                <span class="product-tag">Precios amigables</span>
+            </div>
+            <div class="product-card">
+                <div class="product-icon"><i class="fas fa-rocket"></i></div>
+                <h3>Borrador Rocket</h3>
+                <div class="product-desc">Borrador de puntas intercambiables, súper divertido y funcional. ¡Varios colores!</div>
+                <div class="product-price">$25</div>
+                <span class="product-tag">Trending ✨</span>
+            </div>
+            <div class="product-card">
+                <div class="product-icon"><i class="fas fa-bubble"></i></div>
+                <h3>Bubble & Colored Bubble</h3>
+                <div class="product-desc">Burbujas mágicas de colores, como bichos bubales. ¡Horas de diversión!</div>
+                <div class="product-price">$15 - $35</div>
+                <span class="product-tag">Para los niños</span>
+            </div>
+            <div class="product-card">
+                <div class="product-icon"><i class="fas fa-gamepad"></i></div>
+                <h3>Juguetes sorpresa</h3>
+                <div class="product-desc">Pelotas, figuras, rompecabezas y "Gifts for the children"</div>
+                <div class="product-price">$30 - $150</div>
+                <span class="product-tag">THE BEST WE CAN</span>
+            </div>
+            <div class="product-card">
+                <div class="product-icon"><i class="fas fa-stamp"></i></div>
+                <h3>Stickers & más</h3>
+                <div class="product-desc">Etiquetas, calcomanías divertidas, no etiquetado individual pero ¡packs increíbles!</div>
+                <div class="product-price">$5 - $40</div>
+                <span class="product-tag">Colección Manny</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NUEVA SECCIÓN: 3 IMÁGENES HORIZONTALES -->
+    <div class="image-showcase">
+        <h3><i class="fas fa-images"></i> Galería de novedades</h3>
+        <div class="image-row">
+            <!-- Aquí colocas tus 3 imágenes -->
+            <div class="image-card">
+                <img src="WhatsApp Image 2026-06-02 at 3.49.34 PM (5).jpeg" alt="Borrador Rocket puntas intercambiables">
+                <div class="image-caption">✨ Borrador Rocket · Puntas intercambiables</div>
+            </div>
+            <div class="image-card">
+                <img src="img2.jpeg" alt="Bubble Colored burbujas de colores">
+                <div class="image-caption">🫧 Bubble Colored · Diversión asegurada</div>
+            </div>
+            <div class="image-card">
+                <img src="WhatsApp Image 2026-06-02 at 3.49.34 PM (2).jpeg" alt="Pelikan Redondo y más útiles">
+                <div class="image-caption">✏️ Pelikan, Redondo y material NAS</div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 18px; font-size: 0.85rem; color: #b76e2e;">⭐ Haz clic derecho y reemplaza las imágenes por las tuyas (imagen1.jpg, imagen2.jpg, imagen3.jpg) ⭐</p>
+    </div>
+
+    <!-- Sección especial -->
+    <div id="especiales" class="special-collection">
+        <div class="special-title">
+            <i class="fas fa-magic"></i> Lo más divertido para los peques
+        </div>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 10px auto;">Descubre nuestra selección especial que encantará a los niños: borradores locos, burbujas de ensueño y sorpresas únicas.</p>
+        <div class="specials-grid">
+            <div class="special-item">
+                <i class="fas fa-rocket"></i>
+                <h4>Borrador Rocket</h4>
+                <p>Puntas intercambiables, ideal para regalo o detalle escolar. ¡Vuela en creatividad!</p>
+                <span class="product-tag" style="margin-top:8px;">¡Edición especial!</span>
+            </div>
+            <div class="special-item">
+                <i class="fas fa-fan"></i>
+                <h4>Bubble Colored</h4>
+                <p>Burbujas de colores, como bichos bubales. Perfectas para jugar en familia.</p>
+                <span class="product-tag">No tóxico</span>
+            </div>
+            <div class="special-item">
+                <i class="fas fa-child"></i>
+                <h4>Gifts for Children</h4>
+                <p>“THE BEST WE CAN” — Regalos sorpresa desde $30, llenos de alegría.</p>
+                <span class="product-tag">Hasta $150</span>
+            </div>
+            <div class="special-item">
+                <i class="fas fa-tag"></i>
+                <h4>Stickers Manny</h4>
+                <p>Diseños divertidos, colección exclusiva "No enfoque para su venta individual" pero súper packs.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contacto -->
+    <div id="contacto" class="contact-section">
+        <div class="contact-info">
+            <h3><i class="fas fa-map-pin"></i> Visítanos</h3>
+            <div class="contact-detail">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                    <strong>Calle Javier Rojo Gómez Col. Teñhe No.34</strong><br>
+                    Municipio de Mixquiahuala de Juárez, HGO.<br>
+                    C.P. 42728
+                </div>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-user-circle"></i>
+                <div><strong>Atención directa con:</strong> Berenisse Barrera Escamilla</div>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-phone-alt"></i>
+                <div>Llama o WhatsApp: <strong>+52 771 123 4567</strong> <span style="font-size:0.8rem;">(ejemplo, consulte en tienda)</span></div>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-clock"></i>
+                <div>Lunes a Sábado: 9:00 AM - 7:00 PM<br>Domingos: 10:00 AM - 3:00 PM</div>
+            </div>
+            <div class="owner-name">
+                <i class="fas fa-heart" style="color:#e07c2c;"></i> Berenisse Barrera Escamilla · Dueña y fundadora, siempre lista para ayudarte.
+            </div>
+        </div>
+        <div class="map-placeholder">
+            <i class="fas fa-map-marked-alt"></i>
+            <p><strong>📍 Javier Rojo Gómez #34</strong><br>Colonia Teñhe, Mixquiahuala de Juárez, Hidalgo</p>
+            <p style="margin-top: 15px; font-size: 0.85rem;">⭐ Fácil acceso, cerca del centro. Pregunta por promociones especiales en útiles y juguetes ⭐</p>
+            <div style="background:#d9c9b8; width:100%; margin-top:12px; border-radius:28px; padding:6px; font-size:0.75rem;">
+                <i class="fas fa-school"></i> Regreso a clases: ¡paquetes económicos desde $50!
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>LOS CHATOS</strong> · Papelería y Regalos · Calidez y variedad para toda la familia</p>
+        <p style="margin-top: 12px; font-size: 0.85rem;"><i class="fas fa-envelope"></i> contacto@loschatospapeleria.com · Síguenos en redes como @papelerialoschatos</p>
+        <p style="margin-top: 20px; font-size: 0.75rem;">📍 Calle Javier Rojo Gómez #34, Col. Teñhe, Mixquiahuala de Juárez HGO. CP 42728 · Atención: Berenisse Barrera Escamilla</p>
+        <p style="margin-top: 16px;">✨ Precios accesibles desde $2 hasta $150 ✨ Artículos escolares, juguetes y regalos siempre originales ✨</p>
+    </footer>
+</div>
+
+<script>
+    document.querySelectorAll('.nav-links a, .btn').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
